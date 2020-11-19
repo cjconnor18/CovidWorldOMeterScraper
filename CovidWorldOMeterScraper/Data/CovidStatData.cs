@@ -44,6 +44,7 @@ namespace CovidWorldOMeterScraper.Data
         //delete
         public static bool Remove(int id)
         {
+            LoadData();
             if(CovidStats.ContainsKey(id))
             {
                 CovidStats.Remove(id);

@@ -1,0 +1,32 @@
+﻿@using CovidWorldOMeterScraper.Models;
+
+@if(ViewBag.covidStats.Count == 0)
+{
+    <h2>No Covid Stats Yet!</h2>
+}
+else
+{
+    <table>
+        
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Infections</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(CovidStat stat in ViewBag.covidStats)
+            {
+                <tr>
+                    <td>stat.StatId</td>
+                    <td>stat.Date</td>
+                    <td>stat.Cases</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+}
