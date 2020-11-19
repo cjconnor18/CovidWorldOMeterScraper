@@ -19,7 +19,7 @@ namespace CovidWorldOMeterScraper.Models
         }
         public CovidStat(int cases) : this()
         {
-            Date = new DateTime();
+            Date = DateTime.Today.AddDays(-1);
             Cases = cases;
         }
 
